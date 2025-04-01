@@ -3,7 +3,7 @@ resource "aws_instance" "two-tier-web-1" {
   ami ="ami-076c6dbba59aa92e6"
   instance_type = "t2.micro"
   security_groups = [aws_security_group.two-tier-ec2-sg.id]
-  key_name = "two-tier-key"
+  #key_name = "two-tier-key"#
 
   tags={
     Name="two-tier-web-server-1"
@@ -23,7 +23,7 @@ resource "aws_instance" "two-tier-web-2" {
   ami="ami-076c6dbba59aa92e6"
   instance_type = "t2.micro"
   security_groups = [aws_security_group.two-tier-ec2-sg.id]
-  key_name = "two-tier-key"
+  #key_name = "two-tier-key"#
 
   tags={
     Name="two-tier-web-server-2"
