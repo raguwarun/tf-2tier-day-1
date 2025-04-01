@@ -4,7 +4,7 @@
     storage_type = "gp2"
     engine = "mysql"
     engine_version = "8.0"
-    db_subnet_group_name = aws_db_subnet_group.two-tier-db-sub
+    db_subnet_group_name = aws_db_subnet_group.two-tier-db-sub.name
     vpc_security_group_ids = [aws_security_group.two-tier-db-sg.id]
     db_name = "two_tier_db1"
     username = "admin"
