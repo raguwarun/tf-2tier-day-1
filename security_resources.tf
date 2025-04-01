@@ -79,7 +79,7 @@ resource "aws_security_group" "two-tier-db-sg" {
     to_port = "3306"
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-    security_groups = [aws_security_group.two-tier-ec2-sg]
+    security_groups = [aws_security_group.two-tier-ec2-sg.id]
   }
 
   ingress {
@@ -87,7 +87,7 @@ resource "aws_security_group" "two-tier-db-sg" {
     to_port = 22
     protocol = "tcp"
     cidr_blocks = ["10.0.0.0/16"]
-    security_groups = [aws_security_group.two-tier-ec2-sg]
+    security_groups = [aws_security_group.two-tier-ec2-sg.id]
   }
 
   egress {
