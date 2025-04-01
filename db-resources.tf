@@ -8,7 +8,7 @@
     vpc_security_group_ids = [aws_security_group.two-tier-db-sg.id]
     db_name = "two_tier_db1"
     username = "admin"
-    password = "mysql"
+    password = "administrator"
     multi_az = false
     skip_final_snapshot = true
   }
